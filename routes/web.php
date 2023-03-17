@@ -40,10 +40,7 @@ require __DIR__ . '/auth.php';
 
 Route::get('/list', 'App\Http\Controllers\BooklistController@showList')->name('list');
 
-//本一覧
-Route::get('/products', 'ProductController@index')->name('products.index');
-
 // 写真一覧
-Route::get('/photos', 'PhotoController@index')->name('photos.index');
+Route::get('/photos', 'App\Http\Controllers\PhotoController@index')->name('photos');
 
 require __DIR__ . '/auth.php';
