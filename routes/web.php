@@ -35,6 +35,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+<<<<<<< Updated upstream
 require __DIR__.'/auth.php';
 
 Route::get('/list', 'App\Http\Controllers\BooklistController@showList')->name('list');
+=======
+//本一覧
+Route::get('/products', 'ProductController@index')->name('products.index');
+
+// 写真一覧
+Route::get('/photos', 'PhotoController@index')->name('photos.index');
+
+require __DIR__ . '/auth.php';
+>>>>>>> Stashed changes
